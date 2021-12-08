@@ -5,12 +5,14 @@ Boolean draw=false;
 void setup() {
   fullScreen();
   population();
+  quitButtonSetup();
   drawingDiameter = displayWidth*1/200;
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 } //End setup()
 
 void draw() {
+  quitButtonDraw();
   if (draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) 
   {
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);//this code is for livne vs. circle 
@@ -18,6 +20,9 @@ void draw() {
 }//End draw()
 
 void mousePressed() {
+  //
+  quitButtonMousePressed(); 
+  //
   if (mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) 
   {
     if (draw == false) 
