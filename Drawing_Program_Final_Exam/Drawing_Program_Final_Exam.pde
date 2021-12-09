@@ -6,7 +6,7 @@ void setup() {
   fullScreen();
   population();
   quitButtonSetup();
-  drawingDiameter = displayWidth*1/200;
+  textSetup();
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 } //End setup()
