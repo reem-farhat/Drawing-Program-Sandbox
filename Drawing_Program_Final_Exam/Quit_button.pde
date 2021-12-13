@@ -1,7 +1,7 @@
 //Global Variables 
 String quitButton = "X";
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color quitButtonColour, red=#E00000, white = #FFFFFF;
+color quitButtonColour, red=#E00000, black = #000000;
 int reset=1;
 
 void quitButtonSetup() 
@@ -19,12 +19,12 @@ void quitButtonDraw()
   if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
     quitButtonColour = red;
   } else {
-    quitButtonColour = white;
+    quitButtonColour = black;
   }//End quitButtonHoverOver
   fill (quitButtonColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   stroke(reset);
-  textCode(quitButton, 10, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  textCode(quitButton, 12, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 }//End quitButtonDraw()
 
 void quitButtonMousePressed() 
