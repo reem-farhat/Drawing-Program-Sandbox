@@ -15,7 +15,7 @@ void draw() {
   quitButtonDraw();
   if (draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) 
   {
-    line(mouseX, mouseY, drawingDiameter, drawingDiameter);//this code is for livne vs. circle 
+    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);//this code is for line vs. circle 
   }//End line draw
 }//End draw()
 
